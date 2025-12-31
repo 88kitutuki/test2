@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>大会参加受付｜High Score Tournament</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts（ピクセル寄り） -->
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+/* ====== 全体 ====== */
+body {
+  margin: 0;
+  background: #1c1c1c;
+  background-image: radial-gradient(#2b2b2b 1px, transparent 1px);
+  background-size: 4px 4px;
+  font-family: "Noto Serif JP", serif;
+  color: #f3e9d2;
+}
+
+.container {
+  max-width: 720px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #3a2b1f;
+  border: 6px solid #7a5a3a;
+  box-shadow: 0 0 0 4px #2a1c12, 0 10px 30px rgba(0,0,0,0.7);
+}
+
+/* ====== タイトル ====== */
+.title {
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #ffd27d;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 40px;
+}
+
+/* ====== フォーム ====== */
+form {
+  display: grid;
+  gap: 24px;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  background: #1f140d;
+  border: 2px solid #7a5a3a;
+  color: #f3e9d2;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #b8a98a;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* ====== セクション ====== */
+.section-title {
+  font-family: "Press Start 2P", cursive;
+  font-size: 12px;
+  color: #ffd27d;
+  margin-bottom: 10px;
+}
+
+/* ====== ボタン ====== */
+button {
+  margin-top: 20px;
+  padding: 14px;
+  background: linear-gradient(#8b5a2b, #5a3a1e);
+  border: 3px solid #cfa45a;
+  color: #fff;
+  font-family: "Press Start 2P", cursive;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+/* ====== フッター ====== */
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="title">
+    HIGH SCORE<br>
+    TOURNAMENT
+  </div>
+
+  <div class="subtitle">
+    酒場の掲示板に名を刻め。<br>
+    大会参加者登録フォーム
+  </div>
+
+  <form>
+
+    <div>
+      <div class="section-title">PLAYER INFO</div>
+      <label for="name">プレイヤーネーム</label>
+      <input type="text" id="name" name="name" placeholder="例：ARAGORN" required>
+    </div>
+
+    <div>
+      <label for="school">学年・クラス</label>
+      <input type="text" id="school" name="school" placeholder="例：2年B組" required>
+    </div>
+
+    <div>
+      <label for="email">連絡用メール（任意）</label>
+      <input type="email" id="email" name="email" placeholder="example@mail.com">
+    </div>
+
+    <div>
+      <div class="section-title">GAME SETTING</div>
+      <label for="character">使用キャラクター</label>
+      <select id="character" name="character" required>
+        <option value="">選択してください</option>
+        <option>WARRIOR</option>
+        <option>MAGE</option>
+        <option>ARCHER</option>
+        <option>ROGUE</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="comment">一言コメント（意気込みなど）</label>
+      <textarea id="comment" name="comment" placeholder="酒場の噂に残る一言を…"></textarea>
+    </div>
+
+    <button type="submit">ENTER THE TOURNAMENT</button>
+
+  </form>
+
+  <div class="footer">
+    c High Score Tournament Committee
+  </div>
+
+</div>
+
+</body>
+</html>
